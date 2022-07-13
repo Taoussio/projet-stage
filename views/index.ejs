@@ -1,0 +1,1044 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>dov
+        <link rel="stylesheet" href="style.css">
+        <title>Formulaire</title>
+    </head>
+    <body>
+
+        <div class="form-center">
+            <form>
+                <!-- 1er bloc  -->
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="text" class="form-control" id="email" placeholder="Votre adresse email" required>
+                </div>
+    
+                 <!-- 2eme bloc  -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="proprietaire">Propriétaire / CRM 2</label>
+                        <select id="proprietaire" class="form-control" value="proprietaire__crm_2" onchange="eSelected();">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="apporteur">Apporteur d'affaires CRM 2</label>
+                        <select id="apporteur" class="form-control" value="apporteur_d_affaires_crm_2">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                </div>
+    
+                 <!-- 3eme bloc  -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="date">Date de signature</label>
+                        <input type="date" class="form-control" id="date" value="date_signature">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="transaction">ID transaction AA</label>
+                        <input type="password" class="form-control" id="transaction" value="id_transaction__aa">
+                    </div>
+                </div>
+    
+                 <!-- 4eme bloc  -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nomEntreprise">Nom de l'entreprise</label>
+                        <select id="nomEntreprise" class="form-control" value="raison_sociale">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="enseigne">ENSEIGNE</label>
+                        <select id="enseigne" class="form-control" value="enseigne">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                </div>
+    
+                  <!-- 5eme bloc  -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="annexe">Annexe / bureau</label>
+                        <select id="annexe" class="form-control" value="annexe__bureau_">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-check col-md-6">
+                        <label for="">CLIENT EN PORTEFEUILLE</label>
+                        <br>
+                        <input class="form-check-input" type="checkbox" id="oui">
+                        <label class="form-check-label" for="oui"> OUI </label>
+                        <br>
+                        <input class="form-check-input" type="checkbox" id="non">
+                        <label class="form-check-label" for="non"> NON </label>
+                        <br>
+                        <input class="form-check-input" type="checkbox" id="nc">
+                        <label class="form-check-label" for="nc"> NC </label>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="siret">SIRET</label>
+                        <input type="text" class="form-control" id="siret">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="formeJuridique">FORME JURIDIQUE</label>
+                        <select id="formeJuridique" class="form-control">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="naf">CODE NAF</label>
+                        <select id="naf" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="civilite">civilite</label>
+                        <select id="civilite" class="form-control">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="fnom">Nom</label>
+                        <input type="text" class="form-control" id="fnom">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="lname">Prénom</label>
+                        <input type="text" class="form-control" id="lname">
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="adresseMail">ADRESSE MAIL</label>
+                        <input type="text" class="form-control" id="adresseMail">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="numClient">Numéro de contact client</label>
+                        <input type="text" class="form-control" id="numClient">
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="adresseFacturation">ADRESSE DE FACTURATION</label>
+                    <input type="text" class="form-control" id="email" placeholder="Votre adresse email">
+                </div>
+    
+                <div class="form-group">
+                    <label for="adresseLivraison">ADRESSE LIVRAISON DES TERMINAUX</label>
+                    <input type="text" class="form-control" id="email" placeholder="Votre adresse email">
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="flotteLM1">Flotte - LM1</label>
+                        <input type="text" class="form-control" id="flotteLM1">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="flotteLM2">Flotte - LM2</label>
+                        <input type="text" class="form-control" id="flotteLM2">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="floteLM3">Flotte - LM3</label>
+                        <input type="text" class="form-control" id="floteLM3">
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="avantForfaitLM1">Avant - forfait LM1</label>
+                        <select id="avantForfaitLM1" class="form-control">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="avantForfaitLM2">Avant - forfait LM2</label>
+                        <select id="avantForfaitLM2" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="avantForfaitLM3">Avant - forfait LM3</label>
+                        <select id="avantForfaitLM3" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="rioLM1">RIO - LM1</label>
+                        <input type="text" class="form-control" id="rioLM1">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="rioLM2">RIO - LM2</label>
+                        <input type="text" class="form-control" id="rioLM2">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="rioLM3">RIO - LM3</label>
+                        <input type="text" class="form-control" id="rioLM3">
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="contexteFlotteLM1">Contexte Flotte - LM1</label>
+                        <select id="contexteFlotteLM1" class="form-control">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="contexteFlotteLM2">Contexte Flotte - LM2</label>
+                        <select id="contexteFlotteLM2" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="contexteFlotteLM3">Contexte Flotte - LM3</label>
+                        <select id="contexteFlotteLM3" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="apresForfaitLM1">Après - forfait LM1</label>
+                        <select id="apresForfaitLM1" class="form-control">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="apresForfaitLM2">Après - forfait LM2</label>
+                        <select id="apresForfaitLM2" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="apresForfaitLM3">Après - forfait LM3</label>
+                        <select id="apresForfaitLM3" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                </div>
+    
+                <!-- 3 colonnes checkboxs--> 
+                <div style="background-color: red; height: 20px;">
+    
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="flotteLM4">Flotte - LM4</label>
+                        <input type="text" class="form-control" id="flotteLM4">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="flotteLM5">Flotte - LM5</label>
+                        <input type="text" class="form-control" id="flotteLM5">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="floteLM6">Flotte - LM6</label>
+                        <input type="text" class="form-control" id="floteLM6">
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="avantForfaitLM4">Avant - forfait LM4</label>
+                        <select id="avantForfaitLM4" class="form-control">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="avantForfaitLM5">Avant - forfait LM5</label>
+                        <select id="avantForfaitLM5" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="avantForfaitLM6">Avant - forfait LM6</label>
+                        <select id="avantForfaitLM6" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="rioLM4">RIO - LM4</label>
+                        <input type="text" class="form-control" id="rioLM4">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="rioLM5">RIO - LM5</label>
+                        <input type="text" class="form-control" id="rioLM5">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="rioLM6">RIO - LM3</label>
+                        <input type="text" class="form-control" id="rioLM6">
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="contexteFlotteLM4">Contexte Flotte - LM4</label>
+                        <select id="contexteFlotteLM4" class="form-control">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="contexteFlotteLM5">Contexte Flotte - LM5</label>
+                        <select id="contexteFlotteLM5" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="contexteFlotteLM6">Contexte Flotte - LM6</label>
+                        <select id="contexteFlotteLM6" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="apresForfaitLM4">Après - forfait LM4</label>
+                        <select id="apresForfaitLM4" class="form-control">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="apresForfaitLM5">Après - forfait LM5</label>
+                        <select id="apresForfaitLM5" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="apresForfaitLM6">Après - forfait LM6</label>
+                        <select id="apresForfaitLM6" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                </div>
+    
+                <!-- 3 colonnes checkboxs--> 
+                <div style="background-color: red; height: 20px;">
+    
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="flotteLM7">Flotte - LM7</label>
+                        <input type="text" class="form-control" id="flotteLM1">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="flotteLM8">Flotte - LM8</label>
+                        <input type="text" class="form-control" id="flotteLM2">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="floteLM9">Flotte - LM9</label>
+                        <input type="text" class="form-control" id="floteLM3">
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="avantForfaitLM7">Avant - forfait LM7</label>
+                        <select id="avantForfaitLM7" class="form-control">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="avantForfaitLM8">Avant - forfait LM8</label>
+                        <select id="avantForfaitLM8" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="avantForfaitLM9">Avant - forfait LM9</label>
+                        <select id="avantForfaitLM9" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="rioLM7">RIO - LM7</label>
+                        <input type="text" class="form-control" id="rioLM7">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="rioLM8">RIO - LM8</label>
+                        <input type="text" class="form-control" id="rioLM8">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="rioLM9">RIO - LM9</label>
+                        <input type="text" class="form-control" id="rioLM9">
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="contexteFlotteLM7">Contexte Flotte - LM7</label>
+                        <select id="contexteFlotteLM7" class="form-control">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="contexteFlotteLM8">Contexte Flotte - LM8</label>
+                        <select id="contexteFlotteLM8" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="contexteFlotteLM9">Contexte Flotte - LM9</label>
+                        <select id="contexteFlotteLM9" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="apresForfaitLM7">Après - forfait LM7</label>
+                        <select id="apresForfaitLM7" class="form-control">
+                        <option selected>Veuillez sélectionner</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="apresForfaitLM8">Après - forfait LM8</label>
+                        <select id="apresForfaitLM8" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="apresForfaitLM9">Après - forfait LM9</label>
+                        <select id="apresForfaitLM9" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                    </div>
+                </div>
+    
+                <!-- 3 colonnes checkboxs--> 
+                <div style="background-color: red; height: 20px;">
+    
+    
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="flotteLM10">Flotte - LM10</label>
+                            <input type="text" class="form-control" id="flotteLM10">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="flotteLM11">Flotte - LM11</label>
+                            <input type="text" class="form-control" id="flotteLM11">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="floteLM12">Flotte - LM12</label>
+                            <input type="text" class="form-control" id="floteLM12">
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="avantForfaitLM10">Avant - forfait LM10</label>
+                            <select id="avantForfaitLM10" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="avantForfaitLM11">Avant - forfait LM11</label>
+                            <select id="avantForfaitLM11" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="avantForfaitLM12">Avant - forfait LM12</label>
+                            <select id="avantForfaitLM12" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="rioLM10">RIO - LM10</label>
+                            <input type="text" class="form-control" id="rioLM10">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="rioLM11">RIO - LM11</label>
+                            <input type="text" class="form-control" id="rioLM11">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="rioLM12">RIO - LM12</label>
+                            <input type="text" class="form-control" id="rioLM12">
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="contexteFlotteLM10">Contexte Flotte - LM10</label>
+                            <select id="contexteFlotteLM10" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="contexteFlotteLM11">Contexte Flotte - LM11</label>
+                            <select id="contexteFlotteLM11" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="contexteFlotteLM12">Contexte Flotte - LM12</label>
+                            <select id="contexteFlotteLM12" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="apresForfaitLM10">Après - forfait LM10</label>
+                            <select id="apresForfaitLM10" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="apresForfaitLM11">Après - forfait LM11</label>
+                            <select id="apresForfaitLM11" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="apresForfaitLM12">Après - forfait LM12</label>
+                            <select id="apresForfaitLM12" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+    
+                    <!-- 3 colonnes checkboxs--> 
+                <div style="background-color: red; height: 20px;">
+    
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="flotteLM10">Flotte - LM10</label>
+                            <input type="text" class="form-control" id="flotteLM10">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="flotteLM11">Flotte - LM11</label>
+                            <input type="text" class="form-control" id="flotteLM11">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="floteLM12">Flotte - LM12</label>
+                            <input type="text" class="form-control" id="floteLM12">
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="avantForfaitLM10">Avant - forfait LM10</label>
+                            <select id="avantForfaitLM10" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="avantForfaitLM11">Avant - forfait LM11</label>
+                            <select id="avantForfaitLM11" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="avantForfaitLM12">Avant - forfait LM12</label>
+                            <select id="avantForfaitLM12" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="rioLM10">RIO - LM10</label>
+                            <input type="text" class="form-control" id="rioLM10">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="rioLM11">RIO - LM11</label>
+                            <input type="text" class="form-control" id="rioLM11">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="rioLM12">RIO - LM12</label>
+                            <input type="text" class="form-control" id="rioLM12">
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="contexteFlotteLM10">Contexte Flotte - LM10</label>
+                            <select id="contexteFlotteLM10" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="contexteFlotteLM11">Contexte Flotte - LM11</label>
+                            <select id="contexteFlotteLM11" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="contexteFlotteLM12">Contexte Flotte - LM12</label>
+                            <select id="contexteFlotteLM12" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="apresForfaitLM10">Après - forfait LM10</label>
+                            <select id="apresForfaitLM10" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="apresForfaitLM11">Après - forfait LM11</label>
+                            <select id="apresForfaitLM11" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="apresForfaitLM12">Après - forfait LM12</label>
+                            <select id="apresForfaitLM12" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+    
+                    <!-- 3 colonnes checkboxs--> 
+                <div style="background-color: red; height: 20px;">
+    
+    
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="flotteLM13">Flotte - LM13</label>
+                            <input type="text" class="form-control" id="flotteLM13">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="flotteLM14">Flotte - LM14</label>
+                            <input type="text" class="form-control" id="flotteLM14">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="floteLM15">Flotte - LM15</label>
+                            <input type="text" class="form-control" id="floteLM15">
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="avantForfaitLM13">Avant - forfait LM13</label>
+                            <select id="avantForfaitLM13" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="avantForfaitLM14">Avant - forfait LM14</label>
+                            <select id="avantForfaitLM14" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="avantForfaitLM15">Avant - forfait LM15</label>
+                            <select id="avantForfaitLM15" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="rioLM13">RIO - LM13</label>
+                            <input type="text" class="form-control" id="rioLM13">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="rioLM14">RIO - LM14</label>
+                            <input type="text" class="form-control" id="rioLM14">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="rioLM15">RIO - LM15</label>
+                            <input type="text" class="form-control" id="rioLM15">
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="contexteFlotteLM13">Contexte Flotte - LM13</label>
+                            <select id="contexteFlotteLM13" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="contexteFlotteLM14">Contexte Flotte - LM14</label>
+                            <select id="contexteFlotteLM14" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="contexteFlotteLM15">Contexte Flotte - LM15</label>
+                            <select id="contexteFlotteLM15" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="apresForfaitLM13">Après - forfait LM13</label>
+                            <select id="apresForfaitLM13" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="apresForfaitLM14">Après - forfait LM14</label>
+                            <select id="apresForfaitLM14" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="apresForfaitLM15">Après - forfait LM15</label>
+                            <select id="apresForfaitLM15" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+    
+                    <!-- 3 colonnes checkboxs--> 
+                <div style="background-color: red; height: 20px;">
+    
+    
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="flotteLM16">Flotte - LM16</label>
+                            <input type="text" class="form-control" id="flotteLM16">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="flotteLM17">Flotte - LM17</label>
+                            <input type="text" class="form-control" id="flotteLM17">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="floteLM18">Flotte - LM18</label>
+                            <input type="text" class="form-control" id="floteLM18">
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="avantForfaitLM16">Avant - forfait LM16</label>
+                            <select id="avantForfaitLM16" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="avantForfaitLM17">Avant - forfait LM17</label>
+                            <select id="avantForfaitLM17" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="avantForfaitLM18">Avant - forfait LM18</label>
+                            <select id="avantForfaitLM18" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="rioLM16">RIO - LM16</label>
+                            <input type="text" class="form-control" id="rioLM16">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="rioLM17">RIO - LM17</label>
+                            <input type="text" class="form-control" id="rioLM17">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="rioLM18">RIO - LM18</label>
+                            <input type="text" class="form-control" id="rioLM18">
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="contexteFlotteLM16">Contexte Flotte - LM16</label>
+                            <select id="contexteFlotteLM16" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="contexteFlotteLM17">Contexte Flotte - LM17</label>
+                            <select id="contexteFlotteLM17" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="contexteFlotteLM18">Contexte Flotte - LM18</label>
+                            <select id="contexteFlotteLM18" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="apresForfaitLM16">Après - forfait LM16</label>
+                            <select id="apresForfaitLM16" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="apresForfaitLM17">Après - forfait LM17</label>
+                            <select id="apresForfaitLM17" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="apresForfaitLM18">Après - forfait LM18</label>
+                            <select id="apresForfaitLM18" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+    
+                    <!-- 3 colonnes checkboxs--> 
+                <div style="background-color: red; height: 20px;">
+    
+    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="fmlotteLM19">Flotte - LM19</label>
+                            <input type="text" class="form-control" id="fmlotteLM19">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="fmlotteLM20">Flotte - LM20</label>
+                            <input type="text" class="form-control" id="fmlotteLM20">
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="avantForfaitLM19">Avant - forfait LM19</label>
+                            <select id="avantForfaitLM19" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="avantForfaitLM20">Avant - forfait LM20</label>
+                            <select id="avantForfaitLM20" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div> 
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="rioLM19">RIO - LM19</label>
+                            <input type="text" class="form-control" id="rioLM19">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="rioLM20">RIO - LM20</label>
+                            <input type="text" class="form-control" id="rioLM20">
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="contexteFlotteLM19">Contexte Flotte - LM19</label>
+                            <select id="contexteFlotteLM19" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="contexteFlotteLM20">Contexte Flotte - LM20</label>
+                            <select id="contexteFlotteLM20" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="apresForfaitLM19">Après - forfait LM19</label>
+                            <select id="apresForfaitLM19" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="apresForfaitLM20">Après - forfait LM20</label>
+                            <select id="apresForfaitLM20" class="form-control">
+                                <option selected>Veuillez sélectionner</option>
+                                <option>...</option>
+                                </select>
+                        </div>
+                    </div>
+    
+    
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="civilite">NOM DE OFFRE VENDUE</label>
+                            <select id="civilite" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="fnom">Type d'offre vendue</label>
+                            <select id="civilite" class="form-control">
+                            <option selected>Veuillez sélectionner</option>
+                            <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-check col-md-4">
+                            <label for="">Engagement</label>
+                            <br>
+                            <input class="form-check-input" type="checkbox" id="12M">
+                            <label class="form-check-label" for="21M"> 12 M </label>
+                            <br>
+                            <input class="form-check-input" type="checkbox" id="24M">
+                            <label class="form-check-label" for="24M"> 24 M </label>
+                        </div>
+                    </div>
+                    
+    
+                    <div class="form-group">
+                        <label for="terminauxCommande">TERMINAUX COMMANDES</label>
+                        <textarea class="form-control" id="terminauxCommande" rows="3"></textarea>
+                    </div>
+    
+    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="margeManoeuvre">MARGES DE MANOEUVRE</label>
+                            <textarea class="form-control" id="margeManoeuvre" rows="3"></textarea>
+                        </div>
+                        <div class="form-check col-md-6">
+                            <label for="">Pièces-justificatives</label>
+                            <br>
+                            <input class="form-check-input" type="checkbox" id="kbis">
+                            <label class="form-check-label" for="kbis"> Kbis </label>
+                            <br>
+                            <input class="form-check-input" type="checkbox" id="pieceIdent">
+                            <label class="form-check-label" for="pieceIdent"> Pièces d'identité </label>
+                            <br>
+                            <input class="form-check-input" type="checkbox" id="rib">
+                            <label class="form-check-label" for="rib"> RIB </label>
+                            <br>
+                            <input class="form-check-input" type="checkbox" id="ficheAffaire">
+                            <label class="form-check-label" for="ficheAffaire"> Fiche Affaire </label>
+                            <br>
+                            <input class="form-check-input" type="checkbox" id="attestTitulaire">
+                            <label class="form-check-label" for="attestTitulaire"> Attestation Titulaire </label>
+                            <br>
+                            <input class="form-check-input" type="checkbox" id="formDerogation">
+                            <label class="form-check-label" for="formDerogation"> FORMULAIRE DE DÉROGATION MULTI LIGNES </label>
+                        </div>
+                    </div>
+                    
+    
+                    <div class="form-group">
+                        <label for="commentCommande">Commentaire Commande</label>
+                        <textarea class="form-control" id="commentCommande" rows="3"></textarea>
+                    </div>
+    
+                <center><button type="submit" class="btn" style="background-color: #EE7F00; color: white; border-radius: 10px; width: 300px;"><b>Soumettre</b></button></center>
+            </form>
+        </div>
+        
+    </body>
+    </html>
