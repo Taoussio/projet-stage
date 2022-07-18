@@ -25,6 +25,7 @@ const app = express();
 
 
 app.use(express.static('public'));
+app.use(express.static('js'));
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -47,15 +48,31 @@ const main = async () => {
   let testvar = {}
 
   const rep2 = await hubspot_model.getTransactions(testvar);
+
+  //console.log(rep2.results);
   
 }
+app.get('/', (req, res) => {
+  res.render('index');
+})
 
 main();
+
 
 app.get('/', (req, res) => {
   res.render('index');
 })
 
+app.get('/transaction', async (req, res) => {
+  const rep2 = await hubspot_model.getTransactions({
+    dealname: req.query.dealname,
+  });
+  res.send({
+    dealname: req.query.dealname,
+    resuslt: rep2
+  });
+})
+
+
 
 app.listen(3000);
-

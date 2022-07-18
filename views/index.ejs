@@ -6,24 +6,39 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>dov
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Formulaire</title>
+
+        
+
+        <script>
+            function toggle_visibility(id) {
+                let e = document.getElementById(id);
+                if(e.style.display == 'block')
+                e.style.display = 'none';
+                else
+                e.style.display = 'block';
+            }
+        </script>
     </head>
     <body>
-
         <div class="form-center">
+
             <form>
-                <!-- 1er bloc  -->
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="text" class="form-control" id="email" placeholder="Votre adresse email" required>
+                <div class="header">
+                    <img class="delta" src="delta.png">
+                    <img class="orange" src="orange.jpg">
                 </div>
+
+                <h3 class="title"><b>FORMULAIRE FLOTTE MOBILE</b></h3>
+                
     
                  <!-- 2eme bloc  -->
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="proprietaire">Propriétaire / CRM 2</label>
+                        <label for="proprietaire">Propriétaire </label>
                         <select id="proprietaire" class="form-control" value="proprietaire__crm_2" onchange="eSelected();">
                         <option selected>Veuillez sélectionner</option>
                         <option>...</option>
@@ -68,7 +83,7 @@
                     </div>
                 </div>
     
-                  <!-- 5eme bloc  -->
+                 <!-- 5eme bloc  -->
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="annexe">Annexe / bureau</label>
@@ -92,6 +107,7 @@
                     </div>
                 </div>
                 
+                <!-- 6eme bloc  -->
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="siret">SIRET</label>
@@ -113,6 +129,7 @@
                     </div>
                 </div>
     
+                <!-- 7eme bloc  -->
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="civilite">civilite</label>
@@ -131,6 +148,7 @@
                     </div>
                 </div>
     
+                <!-- 8eme bloc  -->
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="adresseMail">ADRESSE MAIL</label>
@@ -142,16 +160,19 @@
                     </div>
                 </div>
     
+                <!-- 9eme bloc  -->
                 <div class="form-group">
                     <label for="adresseFacturation">ADRESSE DE FACTURATION</label>
                     <input type="text" class="form-control" id="email" placeholder="Votre adresse email">
                 </div>
     
+                <!-- 10eme bloc  -->
                 <div class="form-group">
                     <label for="adresseLivraison">ADRESSE LIVRAISON DES TERMINAUX</label>
                     <input type="text" class="form-control" id="email" placeholder="Votre adresse email">
                 </div>
     
+                <!-- 11eme bloc  -->
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="flotteLM1">Flotte - LM1</label>
@@ -167,6 +188,7 @@
                     </div>
                 </div>
     
+                <!-- 12eme bloc  -->
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="avantForfaitLM1">Avant - forfait LM1</label>
@@ -191,6 +213,7 @@
                     </div>
                 </div>
     
+                <!-- 13eme bloc  -->
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="rioLM1">RIO - LM1</label>
@@ -206,6 +229,7 @@
                     </div>
                 </div>
     
+                <!-- 14eme bloc  -->
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="contexteFlotteLM1">Contexte Flotte - LM1</label>
@@ -230,6 +254,7 @@
                     </div>
                 </div>
     
+                <!-- 15eme bloc  -->
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="apresForfaitLM1">Après - forfait LM1</label>
@@ -253,7 +278,13 @@
                             </select>
                     </div>
                 </div>
-    
+
+        <div onclick=" toggle_visibility('content')">
+            <i class="fa fa-angle-right" style="font-size:48px;color:gray"></i>
+        </div>       
+        
+
+    <span style="display: none;" id="content">           
                 <!-- 3 colonnes checkboxs--> 
                 <div style="background-color: red; height: 20px;">
     
@@ -892,7 +923,7 @@
                     </div>
     
                     <!-- 3 colonnes checkboxs--> 
-                <div style="background-color: red; height: 20px;">
+                <span style="background-color: red; height: 20px;">
     
     
                     <div class="form-row">
@@ -1035,10 +1066,10 @@
                         <label for="commentCommande">Commentaire Commande</label>
                         <textarea class="form-control" id="commentCommande" rows="3"></textarea>
                     </div>
-    
+    </span>
                 <center><button type="submit" class="btn" style="background-color: #EE7F00; color: white; border-radius: 10px; width: 300px;"><b>Soumettre</b></button></center>
             </form>
         </div>
-        
+
     </body>
     </html>
